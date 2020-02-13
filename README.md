@@ -1,27 +1,25 @@
-# WhereIsIss
+# Where is ISS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+This project uses Angular, a simple [api](http://api.open-notify.org) that gives the current Latitude and Longitude of the ISS, [LeafletJS](https://leafletjs.com/) which provides a series of tools to navigate through the map and put the ISS icon on the right place, [mapbox.com](https://www.mapbox.com/) and [OpenStreetMap](https://www.openstreetmap.org/) that provide these clean, confident and perfect maps ~~_and for last my creativity which made all this together work._~~
 
-## Development server
+## Running this project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Be sure that `Node`, `Angular` and `@angular/CLI` is installed.
 
-## Code scaffolding
+- Generate an APIKey at [mapbox.com](https://www.mapbox.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Paste the key into your `src/environments/environment.ts` `mapBoxAPIKEY: YOUR_MAPBOX_API_KEY`
 
-## Build
+- Run `ng serve` for start a server. Navigate to [http://localhost:4200/](http://localhost:4200/).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Be free to suggest improvements.
 
-## Running unit tests
+Project based on [Daniel Shiffman's](https://github.com/CodingTrain/Intro-to-Data-APIs-JS) series.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Special thanks to:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Daniel Shiffman's](https://shiffman.net/)
+- [LeafletJS](https://leafletjs.com/)
+- [Open Notify](http://open-notify.org/)
+- [mapbox.com](https://www.mapbox.com/)
+- [OpenStreetMap](https://www.openstreetmap.org/)
