@@ -1,0 +1,59 @@
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.map-frame {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+.sidenav {
+  position: absolute;
+  display: block;
+  z-index: 999;
+  top: 0%;
+  left: 0;
+  padding: 10px 0 0 50px;
+}
+
+.sidenav button {
+  margin-right: 13px;
+  border: none;
+  display: inline;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+}
+
+input {
+  margin-right: 13px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+}
+
+label {
+  background-color: white;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+}

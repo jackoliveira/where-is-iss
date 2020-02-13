@@ -1,0 +1,27 @@
+<div class="map-container">
+  <div class="map-frame">
+    <div class="sidenav">
+      <button (click)="changeIsLockOn()" [ngClass]="{ active: isLockOn }">
+        {{ "map.lock_on_iss" | translate }}
+      </button>
+
+      <button
+        (click)="changeIsDrawingLine()"
+        [ngClass]="{ active: isDrawingLine }"
+      >
+        {{ "map.draw_line" | translate }}
+      </button>
+
+      <ng-container *ngIf="isDrawingLine">
+        <input
+          type="color"
+          [value]="lineColor"
+          (change)="selectLineColor($event)"
+          id="color-picker"
+        />
+        <label for="color-picker">{{ "map.color_picker" | translate }}</label>
+      </ng-container>
+    </div>
+    <div id="map"></div>
+  </div>
+</div>
