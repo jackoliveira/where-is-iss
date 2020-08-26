@@ -91,10 +91,10 @@ export class MapComponent implements OnInit {
         distinctUntilChanged(),
         filter(data => !!data)
       )
-      .subscribe(({ iss_position }) => {
+      .subscribe(({ latitude, longitude }) => {
         this.position = {
-          latitude: Number(iss_position.latitude),
-          longitude: Number(iss_position.longitude)
+          latitude: Number(latitude),
+          longitude: Number(longitude)
         };
         if (this.position.latitude && this.position.longitude) {
           this.moveAnimation();

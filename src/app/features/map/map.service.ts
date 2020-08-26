@@ -8,9 +8,10 @@ import { Observable } from "rxjs";
 export class MapService {
   constructor(private http: HttpClient) {}
 
-  private defaultURL = "http://api.open-notify.org/iss-now.json";
+  // ISS LOCATION
+  private readonly defaultURL = "https://api.wheretheiss.at/v1/satellites/25544";
 
   public getIssLocation(path: string = this.defaultURL): Observable<any> {
-    return this.http.get(path, { headers: { "Content-Type": "text/plain" }, responseType: "json" });
+    return this.http.get(path);
   }
 }
