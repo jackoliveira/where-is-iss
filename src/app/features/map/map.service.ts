@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -11,6 +11,6 @@ export class MapService {
   private defaultURL = "http://api.open-notify.org/iss-now.json";
 
   public getIssLocation(path: string = this.defaultURL): Observable<any> {
-    return this.http.get(path);
+    return this.http.get(path, { headers: { "Content-Type": "text/plain" }, responseType: "json" });
   }
 }
