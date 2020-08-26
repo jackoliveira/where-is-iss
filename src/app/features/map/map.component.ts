@@ -5,7 +5,6 @@ import { TranslateService } from "@ngx-translate/core";
 import * as Leaflet from "leaflet";
 import { MapService } from "./map.service";
 import { Position } from "./../../core/interfaces/position";
-import { environment } from "./../../../environments/environment";
 
 @Component({
   selector: "app-map",
@@ -50,8 +49,6 @@ export class MapComponent implements OnInit {
 
   private map;
 
-  private apiToken = environment.mapBoxAPIKEY;
-
   public changeIsLockOn(): void {
     this.isLockOn = !this.isLockOn;
   }
@@ -74,15 +71,13 @@ export class MapComponent implements OnInit {
   private initMap(): void {
     this.map = Leaflet.map("map").setView([0, 0], this.zoomLevel);
 
+
+    const attribution =
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
     Leaflet.tileLayer(
-      `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${this.apiToken}`,
-      {
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: "mapbox/streets-v11",
-        accessToken: this.apiToken
-      }
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      { attribution }
     ).addTo(this.map);
 
     this.lineLayerGroup = Leaflet.layerGroup().addTo(this.map);

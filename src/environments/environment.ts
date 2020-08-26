@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  mapBoxAPIKEY: 'mapBoxApiKey' // YOUR MAPBOX API KEY HERE
 };
 
 /*
