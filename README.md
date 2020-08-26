@@ -2,7 +2,11 @@
 
 This project uses Angular, a simple [api](http://api.open-notify.org) that gives the current Latitude and Longitude of the ISS, [LeafletJS](https://leafletjs.com/) which provides a series of tools to navigate through the map and put the ISS icon on the right place, [OpenStreetMap](https://www.openstreetmap.org/) that provide these clean, confident and perfect maps ~~_and for last my creativity which made all this together work._~~
 
-## Running this project
+## Project deployed at Azure Static Web Apps
+
+ - Go to [https://polite-desert-02287090f.azurestaticapps.net/](https://polite-desert-02287090f.azurestaticapps.net/).
+
+## Running this project locally
 
 - Be sure that `Node`, `Angular` and `@angular/CLI` is installed.
 
